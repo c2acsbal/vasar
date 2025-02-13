@@ -37,9 +37,9 @@ def atlag(tartalom, napszamveg):
     
     atlag = sum / napszamveg
 
-    return atlag
+    return atlag, sum
 
-atlagveg = atlag(tartalom,napszamveg)
+atlagveg, sum = atlag(tartalom,napszamveg)
 
 print(round(atlagveg,2))
 
@@ -67,3 +67,4 @@ kicsi, nagy = kicsnagy(tartalom)
 
 print("Legykisebbb",kicsi, "Legynagyobb",nagy)
 
+print(sum)
