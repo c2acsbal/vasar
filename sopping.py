@@ -26,7 +26,7 @@ def koltesmentes(tartalom):
 
 napszamvegkoltsegmentes = koltesmentes(tartalom)
 
-print(napszamvegkoltsegmentes)
+print("Költésgmentes napok száma:",napszamvegkoltsegmentes, "nap")
     
 
 def atlag(tartalom, napszamveg):
@@ -41,7 +41,7 @@ def atlag(tartalom, napszamveg):
 
 atlagveg, sum = atlag(tartalom,napszamveg)
 
-print(round(atlagveg,2))
+print("Átlag",round(atlagveg,2))
 
 
 
@@ -67,9 +67,19 @@ kicsi, nagy = kicsnagy(tartalom)
 
 print("Legykisebbb",kicsi, "Legynagyobb",nagy)
 
-print(sum)
+print("Összesen ennnyi pénz:",sum,"Ft")
 
 def sori(tartalom):
     ennyi = 0
-    for i in len(tartalom):
-        if tartalom[i] 
+    eddigennyi = 1
+    for i in range(len(tartalom)-1):
+        if tartalom[i] == "0" and tartalom[i+1] == "0":
+            eddigennyi +=1
+        else:
+            if ennyi < eddigennyi:
+                ennyi = eddigennyi
+            eddigennyi = 1
+
+    return ennyi
+
+print("Leghoszabb nulla sorozat:",sori(tartalom))
