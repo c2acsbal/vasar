@@ -45,3 +45,25 @@ print(round(atlagveg,2))
 
 
 
+def kicsnagy(tartalom):
+    kicsike = 100000000000000
+    for i in tartalom:
+        i = int(i)
+        if i != 0:
+            if i < kicsike:
+                kicsike = i
+
+    nagyocska = -10000000
+
+    for t in tartalom:
+        t = int(i)
+        if t > nagyocska:
+            nagyocska = t
+
+
+    return(kicsike, nagyocska)
+
+kicsi, nagy = kicsnagy(tartalom)
+
+print("Legykisebbb",kicsi, "Legynagyobb",nagy)
+
