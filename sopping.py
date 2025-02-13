@@ -28,3 +28,20 @@ napszamvegkoltsegmentes = koltesmentes(tartalom)
 
 print(napszamvegkoltsegmentes)
     
+
+def atlag(tartalom, napszamveg):
+    sum = 0
+    for i in tartalom:
+        i = int(i)
+        sum += i
+    
+    atlag = sum / napszamveg
+
+    return atlag
+
+atlagveg = atlag(tartalom,napszamveg)
+
+print(round(atlagveg,2))
+
+
+
