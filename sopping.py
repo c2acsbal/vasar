@@ -68,3 +68,8 @@ kicsi, nagy = kicsnagy(tartalom)
 print("Legykisebbb",kicsi, "Legynagyobb",nagy)
 
 print(sum)
+
+def sori(tartalom):
+    ennyi = 0
+    for i in len(tartalom):
+        if tartalom[i] 
